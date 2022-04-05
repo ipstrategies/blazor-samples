@@ -10,6 +10,7 @@
         Street,
         City,
         State,
-        ZipCode
+        ZipCode,
+        Email
     }
 }

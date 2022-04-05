@@ -30,7 +30,8 @@ namespace BlazorServerDbContextExample.Grid
                 { ContactFilterColumns.Name, c => c != null && c.LastName != null ? c.LastName : string.Empty },
                 { ContactFilterColumns.State, c => c != null && c.State != null ? c.State : string.Empty },
                 { ContactFilterColumns.Street, c => c != null && c.Street != null ? c.Street : string.Empty },
-                { ContactFilterColumns.ZipCode, c => c != null && c.ZipCode != null ? c.ZipCode : string.Empty }
+                { ContactFilterColumns.ZipCode, c => c != null && c.ZipCode != null ? c.ZipCode : string.Empty },
+                { ContactFilterColumns.Email, c => c != null && c.Email != null ? c.Email : string.Empty }
             };
 
         /// <summary>
@@ -55,7 +56,8 @@ namespace BlazorServerDbContextExample.Grid
                 { ContactFilterColumns.Name, cs => cs.Where(c => c != null && c.FirstName != null && _controls.FilterText != null ? c.FirstName.Contains(_controls.FilterText) : false ) },
                 { ContactFilterColumns.State, cs => cs.Where(c => c != null && c.State != null && _controls.FilterText != null ? c.State.Contains(_controls.FilterText) : false ) },
                 { ContactFilterColumns.Street, cs => cs.Where(c => c != null && c.Street != null && _controls.FilterText != null ? c.Street.Contains(_controls.FilterText) : false ) },
-                { ContactFilterColumns.ZipCode, cs => cs.Where(c => c != null && c.ZipCode != null && _controls.FilterText != null ? c.ZipCode.Contains(_controls.FilterText) : false ) }
+                { ContactFilterColumns.ZipCode, cs => cs.Where(c => c != null && c.ZipCode != null && _controls.FilterText != null ? c.ZipCode.Contains(_controls.FilterText) : false ) },
+               { ContactFilterColumns.Email, cs => cs.Where(c => c != null && c.Email != null && _controls.FilterText != null ? c.Email.Contains(_controls.FilterText) : false) }
             };
         }
 

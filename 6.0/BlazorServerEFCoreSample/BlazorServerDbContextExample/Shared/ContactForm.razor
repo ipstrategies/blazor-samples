@@ -66,6 +66,13 @@
                                   DbModel="@DbContact"
                                   Property="obj => obj?.ZipCode" />
             </label>
+             <label>
+                Email:
+                <InputText @bind-Value="Contact.Email" />
+                <ConcurrencyField Model="@Contact"
+                                  DbModel="@DbContact"
+                                  Property="obj => obj?.Email" />
+            </label>
         </p>
         <br />
         <button disabled="@Busy" class="btn btn-warning"

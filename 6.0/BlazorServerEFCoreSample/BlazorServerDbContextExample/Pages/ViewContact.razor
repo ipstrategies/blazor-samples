@@ -17,7 +17,7 @@ else
         <div class="alert alert-info">Loading...</div>
     }
     else
-    {
+    { 
         <h1>@Contact.LastName, @Contact.FirstName</h1>
         <br />
         @if (EditSuccess)
@@ -33,6 +33,8 @@ else
         <br />
         <h3>@Contact.Street</h3>
         <h3>@Contact.City, @Contact.State @Contact.ZipCode</h3>
+        <br />
+        <h2>@Contact.Email</h2>
         <br />
         <a class="btn btn-primary" title="Go Back" href="@PageHelper.Page">
             🔙 Back to Grid

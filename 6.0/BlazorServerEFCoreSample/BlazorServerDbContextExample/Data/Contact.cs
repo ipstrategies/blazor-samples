@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿ using System.ComponentModel.DataAnnotations;
 
 namespace BlazorServerDbContextExample.Data
 {
@@ -58,6 +58,13 @@ namespace BlazorServerDbContextExample.Data
         [Required]
         [RegularExpression(@"^\d{5}(?:[-\s]\d{4})?$", ErrorMessage = "Enter a valid zipcode in 55555 or 55555-5555 format")]
         public string? ZipCode { get; set; }
+
+        /// <summary>
+        /// Email.
+        /// </summary>
+        [Required]
+        [StringLength(100, ErrorMessage = "Enter a valid email address")]
+        public string? Email { get; set; }
 
     }
 }

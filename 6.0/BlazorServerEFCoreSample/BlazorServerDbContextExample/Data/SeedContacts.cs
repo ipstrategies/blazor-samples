@@ -169,6 +169,20 @@ namespace BlazorServerDbContextExample.Data
         };
 
         /// <summary>
+        /// Domain Extentsion.
+        /// </summary>
+        private readonly string[] _domainext = new[]
+        {
+            "com",
+            "net",
+            "us"
+           
+        };
+
+
+
+
+        /// <summary>
         /// Get some randominzation in play.
         /// </summary>
         private readonly Random _random = new();
@@ -199,7 +213,8 @@ namespace BlazorServerDbContextExample.Data
                 $" {RandomOne(_streets)} {RandomOne(_streetTypes)} {RandomOne(_directions)}",
                 City = RandomOne(_cities),
                 State = RandomOne(_states),
-                ZipCode = $"{ _random.Next(10000, 99999)}"
+                ZipCode = $"{ _random.Next(10000, 99999)}",
+                Email = $"{RandomOne(_things)}@{RandomOne(_colors)}.{RandomOne(_domainext)}"
             };
             return contact;
         }

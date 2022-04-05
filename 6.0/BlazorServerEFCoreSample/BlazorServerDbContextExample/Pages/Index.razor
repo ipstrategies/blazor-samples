@@ -62,6 +62,10 @@
                  @onclick="@(async ()=>await ToggleAsync(ContactFilterColumns.ZipCode))">
                 <SortIndicator Column="@(ContactFilterColumns.ZipCode)" />&nbsp;ZipCode
             </div>
+            <div class="col-1"
+                 @onclick="@(async ()=>await ToggleAsync(ContactFilterColumns.Email))">
+                <SortIndicator Column="@(ContactFilterColumns.Email)" />&nbsp;Email
+            </div>
         </div>
         @if (Filters.Loading || Contacts is null)
         {
@@ -236,7 +240,7 @@
         if (Wrapper is not null)
         {
             Wrapper.DeleteRequestId = 0;
-        }
+        } 
 
         Contacts = new List<Contact>();
 
